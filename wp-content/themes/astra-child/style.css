@@ -24,6 +24,7 @@ Template: astra
 body.single .post-dates {
     margin-top: 10px;
   }
+  
 /* Adjusts "Jump to Recipe" button */
   .wprm-recipe-jump.wprm-jump-to-recipe-shortcode {
     padding: 10px 20px;
