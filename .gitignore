@@ -7,9 +7,10 @@
 /readme.html
 /wp-config-sample.php
 
-# Ignore all plugins except your custom one
-!wp-content/plugins/my-custom-plugin/
-wp-content/plugins/*
+# Ignore everything in wp-content except WP Recipe Maker plugin
+wp-content/*
+!wp-content/plugins/
+!wp-content/plugins/wp-recipe-maker/
 
 # Ignore common OS / IDE clutter
 .DS_Store
