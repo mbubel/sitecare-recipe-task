@@ -249,3 +249,13 @@ add_filter( 'wp_get_attachment_image_attributes', function( $attributes ) {
     }
     return $attributes;
 } );
+
+// Enqueue Open Sans font from Google Fonts
+function enqueue_open_sans_font() {
+    wp_enqueue_style(
+      'open-sans',
+      'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap',
+      false
+    );
+  }
+  add_action('wp_enqueue_scripts', 'enqueue_open_sans_font');
