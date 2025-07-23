@@ -259,3 +259,13 @@ function enqueue_open_sans_font() {
     );
   }
   add_action('wp_enqueue_scripts', 'enqueue_open_sans_font');
+
+// Enqueue Roboto Slab font from Google Fonts
+  function enqueue_custom_fonts() {
+    wp_enqueue_style(
+        'custom-fonts',
+        'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap',
+        false
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
