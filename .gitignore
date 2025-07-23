@@ -11,6 +11,10 @@
 wp-content/*
 !wp-content/plugins/
 !wp-content/plugins/wp-recipe-maker/
+!wp-content/themes/
+!wp-content/themes/astra-child/
+!wp-content/themes/astra-child/**/*
+
 
 # Ignore common OS / IDE clutter
 .DS_Store
