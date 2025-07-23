@@ -28,7 +28,7 @@ get_header();
         while (have_posts()):
             the_post();
 
-            the_title('<h1>', '</h1>');
+            the_title('<h1 class="entry-title">', '</h1>');
 
             // Display post publish and updated dates
             $published = get_the_date('M d, Y');
