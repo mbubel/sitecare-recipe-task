@@ -1,0 +1,23 @@
+# Ignore WordPress core and default themes
+/wp-admin/
+/wp-includes/
+/wp-content/themes/twentytwenty*/
+/wp-content/plugins/hello.php
+/license.txt
+/readme.html
+/wp-config-sample.php
+
+# Ignore all plugins except your custom one
+!wp-content/plugins/my-custom-plugin/
+wp-content/plugins/*
+
+# Ignore common OS / IDE clutter
+.DS_Store
+node_modules/
+vendor/
+.env
+*.log
+*.zip
+
+# Ignore uploads if you don’t want media in Git
+wp-content/uploads/
