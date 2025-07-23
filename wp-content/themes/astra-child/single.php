@@ -8,32 +8,51 @@
  * @since 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+ if (!defined('ABSPATH')) {
+    exit;
 }
 
-get_header(); ?>
+get_header();
+?>
 
-<?php if ( astra_page_layout() === 'left-sidebar' ) { ?>
+<?php if (astra_page_layout() === 'left-sidebar') : ?>
+    <?php get_sidebar(); ?>
+<?php endif; ?>
 
-	<?php get_sidebar(); ?>
+<div id="primary" <?php astra_primary_class(); ?>>
 
-<?php } ?>
+    <?php astra_primary_content_top(); ?>
 
-	<div id="primary" <?php astra_primary_class(); ?>>
+    <?php
+    if (have_posts()):
+        while (have_posts()):
+            the_post();
 
-		<?php astra_primary_content_top(); ?>
+            the_title('<h1>', '</h1>');
 
-		<?php astra_content_loop(); ?>
+            // Display post publish and updated dates
+            $published = get_the_date('M d, Y');
+            $modified_timestamp = get_the_modified_time('U');
+            $published_timestamp = get_the_time('U');
 
-		<?php astra_primary_content_bottom(); ?>
+            echo '<div class="post-dates">';
+            if ($modified_timestamp > $published_timestamp) {
+                echo '<span class="updated-date">Updated: ' . esc_html(get_the_modified_date('M d, Y')) . '</span> | ';
+            }
+            echo '<span class="published-date">Published: ' . esc_html($published) . '</span>';
+            echo '</div>';
 
-	</div><!-- #primary -->
+            the_content();
+        endwhile;
+    endif;
+    ?>
 
-<?php if ( astra_page_layout() === 'right-sidebar' ) { ?>
+    <?php astra_primary_content_bottom(); ?>
 
-	<?php get_sidebar(); ?>
+</div><!-- #primary -->
 
-<?php } ?>
+<?php if (astra_page_layout() === 'right-sidebar') : ?>
+    <?php get_sidebar(); ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
