@@ -9,3 +9,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+
+.post-dates {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 1rem;
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adjusts margin for dates */
+body.single .post-dates {
+    margin-top: 10px;
+  }
