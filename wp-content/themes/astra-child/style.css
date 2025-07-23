@@ -24,3 +24,14 @@ Template: astra
 body.single .post-dates {
     margin-top: 10px;
   }
+/* Adjusts "Jump to Recipe" button */
+  .wprm-recipe-jump.wprm-jump-to-recipe-shortcode {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+    white-space: nowrap;
+    line-height: 4rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
