@@ -10,6 +10,7 @@ Text Domain: astra-child
 Template: astra
 */
 
+/* === Post Meta Dates === */
 .post-dates {
     font-size: 0.9rem;
     color: black;
@@ -20,12 +21,12 @@ Template: astra
     z-index: 1;
 }
 
-/* Adjusts margin for dates */
+/* Adds spacing above post dates on single posts */
 body.single .post-dates {
     margin-top: 10px;
 }
 
-/* Adjusts "Jump to Recipe" button */
+/* === "Jump to Recipe" Button === */
 .wprm-recipe-jump.wprm-jump-to-recipe-shortcode {
     padding: 10px 20px;
     font-size: 16px;
@@ -37,6 +38,7 @@ body.single .post-dates {
     font-weight: 400;
 }
 
+/* === Post Title Styling === */
 h1.entry-title {
     font-family: 'Roboto Slab', serif;
     font-size: 50px;
